@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Neeshu13Gi/EVFirePro/static/css/main.b87f9433.css",
-    "main.js": "/Neeshu13Gi/EVFirePro/static/js/main.8f0f53d4.js",
-    "static/js/453.17fce888.chunk.js": "/Neeshu13Gi/EVFirePro/static/js/453.17fce888.chunk.js",
-    "static/media/thermalRunaway.mp4": "/Neeshu13Gi/EVFirePro/static/media/thermalRunaway.27ec294468daf7707b41.mp4",
-    "static/media/EVlogo.png": "/Neeshu13Gi/EVFirePro/static/media/EVlogo.ff31dbb20b74d659a766.png",
-    "static/media/understanding.png": "/Neeshu13Gi/EVFirePro/static/media/understanding.437828d932f7d07c49ce.png",
-    "index.html": "/Neeshu13Gi/EVFirePro/index.html",
-    "main.b87f9433.css.map": "/Neeshu13Gi/EVFirePro/static/css/main.b87f9433.css.map",
-    "main.8f0f53d4.js.map": "/Neeshu13Gi/EVFirePro/static/js/main.8f0f53d4.js.map",
-    "453.17fce888.chunk.js.map": "/Neeshu13Gi/EVFirePro/static/js/453.17fce888.chunk.js.map"
+    "main.css": "/EVFirePro/static/css/main.b87f9433.css",
+    "main.js": "/EVFirePro/static/js/main.5e46d551.js",
+    "static/js/453.17fce888.chunk.js": "/EVFirePro/static/js/453.17fce888.chunk.js",
+    "static/media/thermalRunaway.mp4": "/EVFirePro/static/media/thermalRunaway.27ec294468daf7707b41.mp4",
+    "static/media/EVlogo.png": "/EVFirePro/static/media/EVlogo.ff31dbb20b74d659a766.png",
+    "static/media/understanding.png": "/EVFirePro/static/media/understanding.437828d932f7d07c49ce.png",
+    "index.html": "/EVFirePro/index.html",
+    "main.b87f9433.css.map": "/EVFirePro/static/css/main.b87f9433.css.map",
+    "main.5e46d551.js.map": "/EVFirePro/static/js/main.5e46d551.js.map",
+    "453.17fce888.chunk.js.map": "/EVFirePro/static/js/453.17fce888.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b87f9433.css",
-    "static/js/main.8f0f53d4.js"
+    "static/js/main.5e46d551.js"
   ]
 }
