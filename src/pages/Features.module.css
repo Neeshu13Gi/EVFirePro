@@ -1,0 +1,232 @@
+/* --- Features Container (Full Screen) --- */
+.features-container {
+  min-height: 100vh;
+  background: #0d111c;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(12px, 3vh, 32px) clamp(12px, 3vw, 24px);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* --- Features Frame --- */
+.features-frame {
+  position: relative;
+  width: min(1200px, 95vw);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: clamp(20px, 3vw, 40px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* --- Logo --- */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(12px, 3vh, 28px);
+}
+
+.logo {
+  width: clamp(160px, 25vw, 340px);
+  height: auto;
+}
+
+/* --- Top Section (Video + Buttons) --- */
+.features-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: clamp(28px, 6vw, 56px);
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+/* --- Video --- */
+.video-box {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #000;
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+/* --- Button List --- */
+.button-list {
+  flex: 0 0 clamp(120px, 22vw, 200px);
+  min-width: clamp(90px, 18vw, 160px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3px, 1.5vw, 12px);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title-button {
+  background-color: transparent;
+  background-position: center;
+  background-size: 100% 100%;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  border: none;
+  width: 100%;
+  max-width: 280px;
+  height: clamp(32px, 7vw, 54px);
+  cursor: pointer;
+  font-size: clamp(9px, 2vw, 13px);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-button.active {
+  color: #2d4148ff;
+  font-weight: 700;
+  transform: scale(1.04);
+}
+
+/* --- Description Box --- */
+.features-text {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: clamp(12px, 3vw, 28px);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  font-size: clamp(13px, 2vw, 16px);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.features-text h2 {
+  font-size: clamp(13px, 2vw, 18px);
+  font-weight: 600;
+  margin-bottom: clamp(8px, 1vw, 16px);
+}
+
+.features-text p {
+  font-size: clamp(11px, 1.5vw, 15px);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 900px) {
+  .features-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    row-gap: 10px;
+    column-gap: 18px;
+  }
+
+  .title-button {
+    max-width: 140px;
+  }
+}
+
+/* --- Mobile Screens --- */
+@media (max-width: 600px) {
+  .features-frame {
+    width: 100vw;
+    border-radius: 10px;
+    padding: clamp(10px, 3vw, 18px);
+  }
+
+  .features-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .button-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 6px;
+    column-gap: 10px;
+  }
+
+  .title-button {
+    max-width: 100px;
+    font-size: 10px;
+    height: 28px;
+    padding: 0 5px;
+  }
+}
+
+/* --- Tiny Phones (200px–290px) --- */
+@media (max-width: 290px) and (min-width: 200px) {
+  .button-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .title-button {
+    flex: 1 1 45%;
+    max-width: 45%;
+    font-size: 9px;
+    height: 24px;
+    padding: 0 3px;
+  }
+}
+
+/* --- Landscape Mode --- */
+@media (orientation: landscape) and (max-width: 900px) {
+  .features-top {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: clamp(18px, 4vw, 36px);
+  }
+
+  .button-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    max-height: 80vh;
+    overflow-y: auto;
+    row-gap: 8px;
+  }
+
+  .video-box {
+    max-width: 60vw;
+    min-width: 320px;
+    height: 38vw;
+  }
+}

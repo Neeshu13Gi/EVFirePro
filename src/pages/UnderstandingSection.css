@@ -1,0 +1,376 @@
+/* --- For very small screens (200px to 290px) --- */
+@media (max-width: 290px) and (min-width: 200px) {
+  .button-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 4px; /* spacing between buttons */
+  }
+
+  .title-button {
+    flex: 1 1 45%; /* take about half of the row */
+    max-width: 45%; /* ensures 2 buttons per row */
+    font-size: 9px;
+    height: 24px;
+    padding: 0 3px;
+    box-sizing: border-box;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .button-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+           width: 59%;
+        max-width: 43%;
+    row-gap: 6px;
+    column-gap: 10px;
+  }
+  .title-button {
+    max-width: 90px;
+    font-size: 11px;
+    height: 30px;
+    padding: 0 6px;
+  }
+}
+@media (max-width: 370px) and (min-width: 200px) {
+  .button-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    row-gap: 6px;
+    column-gap: 8px;
+  }
+  .title-button {
+    max-width: 80px;
+    font-size: 10px;
+    height: 28px;
+    padding: 0 4px;
+  }
+}
+@media (orientation: landscape) and (max-width: 900px) {
+  .understanding-top {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: clamp(18px, 4vw, 36px);
+  }
+  .button-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    max-height: 80vh;
+    overflow-y: auto;
+    row-gap: 8px;
+    column-gap: 0;
+  }
+  .title-button {
+    max-width: 140px;
+  }
+  .video-box {
+    max-width: 60vw;
+    min-width: 320px;
+    height: 38vw;
+    aspect-ratio: unset;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .button-list {
+    gap: 1px;
+    row-gap: 0px;
+    column-gap: 6px;
+     max-width: 102px;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(8px, 1vh, 16px);
+  margin-bottom: clamp(6px, 2vh, 16px);
+  position: relative;
+  z-index: 10; /* ensures logo stays above other layers */
+}
+
+/* --- Understanding Container (Full Screen Always Visible) --- */
+.understanding-container {
+  min-height: 100vh;
+  height: auto;
+  background: #0d111c;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* prevent vertical cutoff */
+  padding: clamp(12px, 3vh, 32px) 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+ 
+}
+
+/* --- Understanding Container (always fits screen, scrolls if needed) --- */
+.understanding-container {
+  min-height: 100vh;
+  background: #0d111c;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* prevents cutting off */
+  padding: clamp(12px, 3vh, 32px) clamp(12px, 3vw, 24px);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+ 
+}
+
+/* --- Understanding Frame (responsive scaling and auto height) --- */
+.understanding-frame {
+  position: relative;
+  width: min(1200px, 95vw);
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: clamp(20px, 3vw, 40px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: visible;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 900px) {
+  .understanding-frame {
+    width: 96vw;
+    padding: clamp(14px, 4vw, 28px);
+    border-radius: 18px;
+    box-sizing: border-box;
+    max-height: none; /* prevents cutoff */
+  }
+}
+
+@media (max-width: 700px) {
+  .understanding-frame {
+    width: 98vw;
+    padding: clamp(10px, 3vw, 20px);
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .understanding-frame {
+    width: 100vw;
+    padding: clamp(8px, 3vw, 16px);
+    border-radius: 10px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .understanding-frame {
+    padding: clamp(6px, 3vw, 16px);
+    width: 100vw;
+    border-radius: 8px;
+  }
+}
+
+
+
+
+
+/* --- Layout --- */
+.understanding-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: clamp(28px, 6vw, 56px);
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.video-box {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 700px) {
+  .video-box {
+    max-width: 100%;
+  }
+}
+
+/* --- Video Element --- */
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit; /* matches parent rounding */
+  display: block;
+}
+
+/* --- Tablet (Medium Screens) --- */
+@media (max-width: 900px) {
+  .video-box {
+    max-width: 95%;
+    border-radius: 14px;
+  }
+}
+
+/* --- Mobile (Small Screens) --- */
+@media (max-width: 600px) {
+  .video-box {
+    max-width: 100%;
+    border-radius: 12px;
+    aspect-ratio: 16 / 9; /* still maintains ratio */
+  }
+
+  .video-box video {
+    border-radius: 12px;
+  }
+}
+
+/* --- Very Small Devices (e.g. small phones) --- */
+@media (max-width: 400px) {
+  .video-box {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  }
+}
+
+
+
+/* --- Button List --- */
+.button-list {
+  flex: 0 0 clamp(120px, 22vw, 200px);
+  min-width: clamp(90px, 18vw, 160px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3px, 1.5vw, 12px);
+  justify-content: flex-start;
+}
+
+.title-button {
+  background-color:transparent ;
+  background-position: center;
+  background-size: 100% 100%;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  border: none;
+  width: 100%;
+  max-width: 320px;
+  height: clamp(32px, 7vw, 54px);
+  cursor: pointer;
+  font-size: clamp(9px, 2vw, 13px);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title-button.active {
+  color: #2d4148ff;
+  font-weight: 700;
+}
+
+/* --- Description Box --- */
+.understanding-text {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: clamp(12px, 3vw, 28px);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  font-size: clamp(13px, 2vw, 16px);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.understanding-text h2 {
+  font-size: clamp(13px, 2vw, 18px);
+  font-weight: 600;
+  margin-bottom: clamp(8px, 1vw, 16px);
+}
+
+.understanding-text p {
+  font-size: clamp(11px, 1.5vw, 15px);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 900px) {
+  .understanding-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    row-gap: 10px;
+    column-gap: 18px;
+    max-height: 220px;
+   
+  }
+
+  .title-button {
+    max-width: 160px;
+  }
+  
+  
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 600px) {
+  .understanding-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    row-gap: 10px;
+    column-gap: 18px;
+    max-height: 220px;
+    
+  }
+
+  .title-button {
+    max-width: 115px;
+  }
+
+}
+/* === FINAL SCROLL FIX === */
