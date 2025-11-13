@@ -16,39 +16,49 @@ import styles from './Features.module.css';
 
 
 
-// Styled components reused from your pages...
 const Container = styled('div')({
+  width: '100%',
+  height: '100vh', // always full screen height
+  display: 'flex',
+  justifyContent: 'center', // center horizontally
+  alignItems: 'center', // center vertically
+  backgroundColor: '#0d111c',
+  padding: 'clamp(8px, 2vw, 24px)',
+  boxSizing: 'border-box',
+   overflowY: 'auto', // allows scroll if content overflows
+  '@media (max-height: 500px)': {
+    height: 'auto', // allows scroll if screen is extremely short
     minHeight: '100vh',
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#0d111c',
-    padding: 'clamp(16px, 3vw, 40px)',
-    boxSizing: 'border-box',
-    overflow: 'auto',
+    overflowY: 'auto',
+  },
 });
+
 const Frame = styled('div')({
-    width: 'min(1200px, 95vw)',
-    maxWidth: '150vw',
-    minHeight: 'min(85vh, 820px)',
-    background: 'rgba(255,255,255,0.03)',
-    border: '1px solid rgba(255,255,255,0.08)',
-    borderRadius: '16px',
-    padding: 'clamp(20px, 3vw, 40px)',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    position: 'relative',
-    overflow: 'hidden',
-    '@media (max-width: 768px)': {
-        minHeight: 'auto',
-        padding: 'clamp(16px, 5vw, 32px)',
-    },
+  width: 'min(1200px, 95vw)',
+  minHeight: 'min(85vh, 820px)',
+  background: 'rgba(255,255,255,0.03)',
+  border: '1px solid rgba(255,255,255,0.08)',
+  borderRadius: '16px',
+  padding: 'clamp(20px, 3vw, 40px)',
+  boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'flex-start',
+  position: 'relative',
+  overflow: 'hidden',
+  margin: 'auto', // ensures centering even with scroll
+  '@media (max-width: 768px)': {
+    width: '95vw',
+    minHeight: 'auto',
+    padding: 'clamp(16px, 4vw, 28px)',
+  },
+  '@media (orientation: landscape) and (max-height: 600px)': {
+    minHeight: '90vh',
+    justifyContent: 'center',
+  },
 });
+
 const LogoContainer = styled('div')({
     width: '100%',
     display: 'flex',
@@ -231,58 +241,82 @@ if (section === 'features') {
   const current = featuresContent[featuresIdx];
   return (
     <Container>
-            <Frame>
-    <div className={styles.featuresContainer}>
-  <div className={styles.featuresFrame}>
-
-        <LogoContainer>
-                        <Logo src={logo} alt="EV Fire Protection" />
-                        <button style={{ position: 'absolute', top: 21, right: 18, padding: '4px 6px', border: 'none', background: 'transparent', cursor: 'pointer', zIndex: 20 }} onClick={() => setSection('home')} aria-label="Back to Home">
-                            <img src={backIcon} alt="Back" style={{ width: 'clamp(20px, 4vw, 34px)', height: 'auto', display: 'block', pointerEvents: 'none' }} />
-                        </button>
-                    </LogoContainer>
-
-        {/* --- Top Section (Video + Buttons) --- */}
-        <div className="features-top">
-          {/* Video Box */}
-          <div className="video-box">
-            <video
-              ref={featuresVideoRef}
-              src={current.video}
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          </div>
-
-          {/* Button List */}
-          <div className="button-list">
-            {featuresContent.map((item, i) => (
+      <Frame>
+        <div className={styles.featuresContainer}>
+          <div className={styles.featuresFrame}>
+            {/* === Logo + Back === */}
+            <LogoContainer>
+              <Logo src={logo} alt="EV Fire Protection" />
               <button
-                key={item.button}
-                className={`title-button ${i === featuresIdx ? 'active' : ''}`}
                 style={{
-                  background: `url(${titleButton}) no-repeat center center`,
-                  backgroundSize: '100% 100%',
+                  position: 'absolute',
+                  top: 21,
+                  right: 18,
+                  padding: '4px 6px',
+                  border: 'none',
+                  background: 'transparent',
+                  cursor: 'pointer',
+                  zIndex: 20,
                 }}
-                onClick={() => setFeaturesIdx(i)}
+                onClick={() => setSection('home')}
+                aria-label="Back to Home"
               >
-                {item.button}
+                <img
+                  src={backIcon}
+                  alt="Back"
+                  style={{
+                    width: 'clamp(20px, 4vw, 34px)',
+                    height: 'auto',
+                    display: 'block',
+                    pointerEvents: 'none',
+                  }}
+                />
               </button>
-            ))}
+            </LogoContainer>
+
+            {/* === Video + Buttons Layout === */}
+            <div className={styles.featuresTop}>
+              {/* Video Section */}
+              <div className={styles.videoBoxFeatures}>
+                <video
+                  ref={featuresVideoRef}
+                  src={current.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              </div>
+
+              {/* Buttons Section */}
+              <div className={styles.buttonListFeatures}>
+                {featuresContent.map((item, i) => (
+                  <button
+                    key={item.button}
+                    className={`${styles.titleButtonFeatures} ${
+                      i === featuresIdx ? styles.active : ''
+                    }`}
+                    style={{
+                      background: `url(${titleButton}) no-repeat center center`,
+                      backgroundSize: '100% 100%',
+                    }}
+                    onClick={() => setFeaturesIdx(i)}
+                  >
+                    {item.button}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* === Description Section === */}
+            <div className={styles.featuresText}>
+              <h2>{current.title}</h2>
+              <p>{current.text}</p>
+            </div>
           </div>
         </div>
-
-        {/* --- Description Text --- */}
-        <div className="features-text">
-          <h2>{current.title}</h2>
-          <p>{current.text}</p>
-        </div>
-      </div>
-    </div>
-     </Frame>
-        </Container>
+      </Frame>
+    </Container>
   );
 }
 

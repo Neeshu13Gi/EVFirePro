@@ -1,232 +1,164 @@
-/* --- Features Container (Full Screen) --- */
-.features-container {
-  min-height: 100vh;
-  background: #0d111c;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: clamp(12px, 3vh, 32px) clamp(12px, 3vw, 24px);
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-/* --- Features Frame --- */
-.features-frame {
-  position: relative;
-  width: min(1200px, 95vw);
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: clamp(20px, 3vw, 40px);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-/* --- Logo --- */
-.logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: clamp(12px, 3vh, 28px);
-}
-
-.logo {
-  width: clamp(160px, 25vw, 340px);
-  height: auto;
-}
-
-/* --- Top Section (Video + Buttons) --- */
-.features-top {
+/* --- Layout: Video Left, Buttons Right --- */
+.featuresTop {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  gap: clamp(28px, 6vw, 56px);
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 24px;
+  gap: clamp(28px, 5vw, 60px);
+  margin-bottom: 10px;
 }
 
-/* --- Video --- */
-.video-box {
+/* --- Video Box --- */
+.videoBoxFeatures {
   width: 100%;
   max-width: 720px;
   aspect-ratio: 16 / 9;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: #000;
+  margin-top: 10px;
 }
 
-.video-box video {
+.videoBoxFeatures video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
-  display: block;
 }
 
-/* --- Button List --- */
-.button-list {
-  flex: 0 0 clamp(120px, 22vw, 200px);
-  min-width: clamp(90px, 18vw, 160px);
+/* --- Buttons --- */
+.buttonListFeatures {
   display: flex;
   flex-direction: column;
-  gap: clamp(3px, 1.5vw, 12px);
+  gap: clamp(2px, 1vw, 1px);
+  flex: 0 0 clamp(140px, 22vw, 200px);
+  min-width: 150px;
   justify-content: flex-start;
-  align-items: center;
 }
 
-.title-button {
+.titleButtonFeatures {
   background-color: transparent;
   background-position: center;
   background-size: 100% 100%;
   color: rgba(255, 255, 255, 0.95);
   font-weight: 400;
   border: none;
-  width: 100%;
-  max-width: 280px;
-  height: clamp(32px, 7vw, 54px);
+  width: 90%;
+  height: clamp(30px, 5.5vw, 46px);
   cursor: pointer;
-  font-size: clamp(9px, 2vw, 13px);
-  border-radius: 2px;
-  transition: all 0.25s ease;
+  font-size: clamp(9px, 0.9vw, 13px);
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  transition: all 0.25s ease;
+  padding: 2px 4px;
+  line-height: 1.1;
+  word-break: keep-all;
 }
 
-.title-button.active {
+/* --- Active Button --- */
+.titleButtonFeatures.active {
   color: #2d4148ff;
   font-weight: 700;
-  transform: scale(1.04);
 }
 
-/* --- Description Box --- */
-.features-text {
+/* --- Description Text --- */
+.featuresText {
   width: 100%;
-  max-width: 990px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.04);
+  max-width: 960px;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid #fff;
   border-radius: 20px;
   padding: clamp(12px, 3vw, 28px);
   color: #fff;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
-  font-size: clamp(13px, 2vw, 16px);
-  line-height: 1.6;
   text-align: center;
 }
 
-.features-text h2 {
-  font-size: clamp(13px, 2vw, 18px);
+.featuresText h2 {
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: 600;
-  margin-bottom: clamp(8px, 1vw, 16px);
+  margin-bottom: 10px;
 }
 
-.features-text p {
-  font-size: clamp(11px, 1.5vw, 15px);
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.6;
-}
-
-/* --- Responsive Tweaks --- */
+/* --- Responsive Adjustments --- */
 @media (max-width: 900px) {
-  .features-top {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .button-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    row-gap: 10px;
-    column-gap: 18px;
-  }
-
-  .title-button {
-    max-width: 140px;
-  }
-}
-
-/* --- Mobile Screens --- */
-@media (max-width: 600px) {
-  .features-frame {
-    width: 100vw;
-    border-radius: 10px;
-    padding: clamp(10px, 3vw, 18px);
-  }
-
-  .features-top {
+  .featuresTop {
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  .button-list {
+  .buttonListFeatures {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 6px;
-    column-gap: 10px;
+    row-gap: 10px;
+    column-gap: 14px;
   }
 
-  .title-button {
-    max-width: 100px;
-    font-size: 10px;
-    height: 28px;
-    padding: 0 5px;
+  .titleButtonFeatures {
+    max-width: 150px;
   }
 }
 
-/* --- Tiny Phones (200px–290px) --- */
-@media (max-width: 290px) and (min-width: 200px) {
-  .button-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* --- Landscape Small Screens --- */
+@media (orientation: landscape) and (max-width: 900px) {
+  .featuresTop {
+    flex-direction: row;
+    align-items: flex-start;
+  
+  }
+
+  .buttonListFeatures {
+    flex-direction: column;
+    gap: 1px;
+    max-height: 80vh;
+  }
+}
+
+/* --- Very Small Screens (≤400px) --- */
+@media (max-width: 400px) {
+  .buttonListFeatures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    justify-items: center;
+  }
+
+  .titleButtonFeatures {
     width: 100%;
+    height: clamp(27px, 4.5vw, 28px);
+    font-size: clamp(6px, 2vw, 9px); /* smaller text */
+    padding: 1px 2px;
+    line-height: 1;
+    white-space: nowrap; /* prevent multi-line */
+  
+    text-overflow: ellipsis; /* add ... if overflow */
+  }
+}
+/* --- Tablet / Mid-size (700px–850px) Adjustments --- */
+@media (min-width: 700px) and (max-width: 850px) {
+  .featuresTop {
+    gap: 24px;
+    align-items: center;
+  }
+
+  .videoBoxFeatures {
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .buttonListFeatures {
+    flex: 0 0 10px; /* slightly narrower column */
     gap: 4px;
   }
 
-  .title-button {
-    flex: 1 1 45%;
-    max-width: 45%;
-    font-size: 9px;
-    height: 24px;
-    padding: 0 3px;
-  }
-}
-
-/* --- Landscape Mode --- */
-@media (orientation: landscape) and (max-width: 900px) {
-  .features-top {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: clamp(18px, 4vw, 36px);
-  }
-
-  .button-list {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    max-height: 80vh;
-    overflow-y: auto;
-    row-gap: 8px;
-  }
-
-  .video-box {
-    max-width: 60vw;
-    min-width: 320px;
-    height: 38vw;
+  .titleButtonFeatures {
+    height: clamp(26px, 4vw, 38px);
+    font-size: clamp(8px, 1.2vw, 11px);
+    padding: 2px 3px;
+    line-height: 1.05;
   }
 }
