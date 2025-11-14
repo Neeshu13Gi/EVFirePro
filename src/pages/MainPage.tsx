@@ -10,6 +10,7 @@ import understandingImg from '../assets/images/understanding.png';
 import backIcon from '../assets/images/back.png';
 import titleButton from '../assets/images/title_Button.png';
 import thermalVideo from '../assets/videos/thermalRunaway.mp4';
+import OccupantWarning from '../assets/videos/Occupant warning system.mp4';
 import './UnderstandingSection.css';
 import styles from './Features.module.css';
 
@@ -150,7 +151,7 @@ const featuresContent = [
     { title: 'Vertical Spray Cooling', text: 'Strategic vertical spray pattern designed to effectively cool and suppress EV battery fires.', button: 'Vertical Spray Cooling', video: thermalVideo },
     { title: 'Lateral Water Spray', text: 'Comprehensive coverage with lateral water spray ensures complete protection of the affected area.', button: 'Lateral Water Spray', video: thermalVideo },
     { title: 'Building System Integration', text: 'Seamlessly connects with existing building fire systems for coordinated emergency response.', button: 'Building System Integration', video: thermalVideo },
-    { title: 'Occupant Warning System', text: 'Built-in warning system to alert occupants and facilitate safe evacuation procedures.', button: 'Occupant Warning', video: thermalVideo },
+    { title: 'Occupant Warning System', text: 'Built-in warning system to alert occupants and facilitate safe evacuation procedures.', button: 'Occupant Warning', video: OccupantWarning },
     { title: 'Dry Pipework', text: 'Advanced dry pipe system design to prevent corrosion and ensure long-term reliability.', button: 'Dry Pipework', video: thermalVideo },
 ];
 
@@ -196,7 +197,7 @@ const MainPage = () => {
                         </button>
                     </LogoContainer>
                     <div style={{ width: 'min(900px,92%)', maxWidth: '100%', aspectRatio: '16/9', background: 'rgba(0,0,0,0.6)', borderRadius: 20, border: '2px solid rgba(255,255,255,0.95)', boxShadow: '0 6px 18px rgba(0,0,0,0.55)', overflow: 'hidden', marginTop: 35 }}>
-                        <video
+                        <video controls
                             src={thermalVideo}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12, display: 'block' }}
                             autoPlay
@@ -222,7 +223,7 @@ const MainPage = () => {
                         </button>
                     </LogoContainer>
                     <div style={{ width: 'min(900px,92%)', maxWidth: '100%', aspectRatio: '16/9', background: 'rgba(0,0,0,0.6)', borderRadius: 20, border: '2px solid rgba(255,255,255,0.95)', boxShadow: '0 6px 18px rgba(0,0,0,0.55)', overflow: 'hidden', marginTop: 35 }}>
-                        <video
+                        <video controls
                             src={thermalVideo}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12, display: 'block' }}
                             autoPlay
@@ -278,7 +279,7 @@ if (section === 'features') {
             <div className={styles.featuresTop}>
               {/* Video Section */}
               <div className={styles.videoBoxFeatures}>
-                <video
+                <video controls
                   ref={featuresVideoRef}
                   src={current.video}
                   autoPlay
@@ -338,7 +339,8 @@ if (section === 'understanding') {
                  
                 <div className="understanding-top">
                     <div className="video-box">
-                        <video
+                        <video controls
+                             className="videoPlayer"
                             ref={understandingVideoRef}
                             src={current.video}
                             autoPlay
