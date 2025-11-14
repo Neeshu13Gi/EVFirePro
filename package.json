@@ -2,8 +2,8 @@
   "name": "evfirepro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://neeshu13gi.github.io/EVFirePro",
-  "dependencies": {
+ "homepage": ".",
+ "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.4",
