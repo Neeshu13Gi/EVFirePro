@@ -177,8 +177,26 @@ const MainPage = () => {
                     <ButtonContainer>
                         <Button text="" onClick={() => setSection('suppression')} imageSrc={suppressionImg} />
                         <Button text="" onClick={() => setSection('batteryfire')} imageSrc={batteryFireImg} />
-                        <Button text="" onClick={() => setSection('features')} imageSrc={featuresImg} />
-                        <Button text="" onClick={() => setSection('understanding')} imageSrc={understandingImg} />
+                          <Button text="" 
+    onClick={() => {
+        setFeaturesIdx(0);
+        setTimeout(() => featuresVideoRef.current?.load(), 50);
+        setSection('features');
+    }} 
+    imageSrc={featuresImg}
+/>
+
+<Button text="" 
+    onClick={() => {
+        setUnderstandingIdx(0);
+        setTimeout(() => understandingVideoRef.current?.load(), 50);
+        setSection('understanding');
+    }} 
+    imageSrc={understandingImg}
+/>
+
+                        {/* <Button text="" onClick={() => setSection('features')} imageSrc={featuresImg} />
+                        <Button text="" onClick={() => setSection('understanding')} imageSrc={understandingImg} /> */}
                     </ButtonContainer>
                 </Frame>
             </Container>
