@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/EVFirePro/static/css/main.f8528141.css",
-    "main.js": "/EVFirePro/static/js/main.13e17df6.js",
+    "main.css": "/EVFirePro/static/css/main.56ee0673.css",
+    "main.js": "/EVFirePro/static/js/main.dc9f3d89.js",
     "static/js/453.17fce888.chunk.js": "/EVFirePro/static/js/453.17fce888.chunk.js",
-    "static/media/thermalRunaway.mp4": "/EVFirePro/static/media/thermalRunaway.27ec294468daf7707b41.mp4",
+    "static/media/thermalRunaway.mp4": "/EVFirePro/static/media/thermalRunaway.2eb1dd4adee0a3e483af.mp4",
     "static/media/Occupant warning system.mp4": "/EVFirePro/static/media/Occupant warning system.0c51ed256c80bce469ae.mp4",
     "static/media/EVlogo.png": "/EVFirePro/static/media/EVlogo.ff31dbb20b74d659a766.png",
     "static/media/understanding.png": "/EVFirePro/static/media/understanding.437828d932f7d07c49ce.png",
     "index.html": "/EVFirePro/index.html",
-    "main.f8528141.css.map": "/EVFirePro/static/css/main.f8528141.css.map",
-    "main.13e17df6.js.map": "/EVFirePro/static/js/main.13e17df6.js.map",
+    "main.56ee0673.css.map": "/EVFirePro/static/css/main.56ee0673.css.map",
+    "main.dc9f3d89.js.map": "/EVFirePro/static/js/main.dc9f3d89.js.map",
     "453.17fce888.chunk.js.map": "/EVFirePro/static/js/453.17fce888.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8528141.css",
-    "static/js/main.13e17df6.js"
+    "static/css/main.56ee0673.css",
+    "static/js/main.dc9f3d89.js"
   ]
 }
