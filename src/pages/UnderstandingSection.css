@@ -204,13 +204,19 @@
 }
 
 .video-box {
-  width: 100%;
-  max-width: 720px;
+ width: 100%;
+  max-width: 725px;
   aspect-ratio: 16 / 9;
   border-radius: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);  /* inner border */
+  outline: 1px solid #ffffff;                 /* outer white frame */
+  outline-offset: 0cap;                        /* spacing between frames */
+
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 5px;
 }
+
 
 @media (max-width: 700px) {
   .video-box {
