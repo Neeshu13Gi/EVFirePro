@@ -35,7 +35,7 @@ const Container = styled('div')({
 });
 
 const Frame = styled('div')({
-  width: 'min(1200px, 95vw)',
+  width: 'min(1000px, 95vw)',
   minHeight: 'min(85vh, 820px)',
   background: 'rgba(255,255,255,0.03)',
   border: '1px solid rgba(255,255,255,0.08)',
