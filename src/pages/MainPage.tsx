@@ -10,7 +10,9 @@ import understandingImg from '../assets/images/understanding.png';
 import backIcon from '../assets/images/back.png';
 import titleButton from '../assets/images/title_Button.png';
 import thermalVideo from '../assets/videos/thermalRunaway.mp4';
+import about_EV from '../assets/videos/about_EV_v2.mp4';
 import OccupantWarning from '../assets/videos/Occupant warning system.mp4';
+import connectwithbulding from '../assets/videos/connect with bulding fire-2.mp4';
 import './UnderstandingSection.css';
 import styles from './Features.module.css';
 
@@ -138,7 +140,7 @@ const understandingContent = [
         title: 'About Electric Vehicles',
         text: 'EVs are safe in daily use, with a low likelihood of fire – usually only after battery damage – but when they do occur, they burn hotter, longer, and less predictably than petrol fires.',
         button: 'About EV Vehicles',
-        video: thermalVideo,
+        video: about_EV,
     },
 ];
 
@@ -150,7 +152,7 @@ const featuresContent = [
     { title: 'Automatic Activation', text: 'Activates instantly at 68°C (154°F) when heat is detected Benefits: • No manual intervention required.', button: 'Automatic Activation', video: thermalVideo },
     { title: 'Vertical spray directly beneath the vehicle cooling the battery pack ', text: 'Benefits: • Reduces heat at its source • Limits fire spread • Increases time for evacuations if required ', button: 'Vertical Spray Cooling', video: thermalVideo },
     { title: 'Sprays water laterally outward from under the vehicle', text: 'Benefits: • Protects adjacent vehicles from fire spread • Prevents structural damage', button: 'Lateral Water Spray', video: thermalVideo },
-    { title: 'Connects directly to the building’s fire detection and alarms', text: 'Benefits: • Ensures emergency services are alerted immediately• Addressable system- pinpointing location for emergency services ', button: 'Building System Integration', video: thermalVideo },
+    { title: 'Connects directly to the building’s fire detection and alarms', text: 'Benefits: • Ensures emergency services are alerted immediately• Addressable system- pinpointing location for emergency services ', button: 'Building System Integration', video: connectwithbulding },
     { title: 'Integrates with the building’s occupant alert system  ', text: 'Benefits: • Esures a fast and safe evacuation of building occupants. ', button: 'Occupant Warning', video: OccupantWarning },
     { title: 'Remains dry and unpressurised until activation ', text: 'Benefits: • Prevents leaks and reduces corrosion.', button: 'Dry Pipework', video: thermalVideo },
 ];
