@@ -11,6 +11,8 @@ import backIcon from '../assets/images/back.png';
 import titleButton from '../assets/images/title_Button.png';
 import thermalVideo from '../assets/videos/thermalRunaway.mp4';
 import about_EV from '../assets/videos/about_EV_v2.mp4';
+import FireSuppressed from '../assets/videos/FireEVPro_FireSuppressed_V1.mp4';
+import FireUnSuppressed from '../assets/videos/FireEVPro_UnSuppressed_V1.mp4';
 import OccupantWarning from '../assets/videos/Occupant warning system.mp4';
 import connectwithbulding from '../assets/videos/connect with bulding fire-2.mp4';
 import './UnderstandingSection.css';
@@ -218,7 +220,7 @@ const MainPage = () => {
                     </LogoContainer>
                     <div style={{ width: 'min(900px,92%)', maxWidth: '100%', aspectRatio: '16/9', background: 'rgba(0,0,0,0.6)', borderRadius: 20, border: '2px solid rgba(255,255,255,0.95)', boxShadow: '0 6px 18px rgba(0,0,0,0.55)', overflow: 'hidden', marginTop: 35 }}>
                         <video controls
-                            src={thermalVideo}
+                            src={FireSuppressed}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12, display: 'block' }}
                             autoPlay
                             loop
@@ -244,7 +246,7 @@ const MainPage = () => {
                     </LogoContainer>
                     <div style={{ width: 'min(900px,92%)', maxWidth: '100%', aspectRatio: '16/9', background: 'rgba(0,0,0,0.6)', borderRadius: 20, border: '2px solid rgba(255,255,255,0.95)', boxShadow: '0 6px 18px rgba(0,0,0,0.55)', overflow: 'hidden', marginTop: 35 }}>
                         <video controls
-                            src={thermalVideo}
+                            src={FireUnSuppressed}
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12, display: 'block' }}
                             autoPlay
                             loop
