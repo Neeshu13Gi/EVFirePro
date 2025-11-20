@@ -199,10 +199,52 @@ const MainPage = () => {
     // For Understanding
     const [understandingIdx, setUnderstandingIdx] = useState(0);
     const understandingVideoRef = useRef<HTMLVideoElement>(null);
+  // For Understanding Fade Animation
+const [fade, setFade] = useState(false);
+
+const switchUnderstandingVideo = (i: number) => {
+
+    if (i === understandingIdx) return;
+
+    setFade(true);
+
+    setTimeout(() => {
+        setUnderstandingIdx(i);
+        understandingVideoRef.current?.load();
+    }, 200);
+
+    setTimeout(() => {
+        setFade(false);
+    }, 400);
+};
+
+
+
 
     // For Features
     const [featuresIdx, setFeaturesIdx] = useState(0);
     const featuresVideoRef = useRef<HTMLVideoElement>(null);
+
+
+// const [fade, setFade] = useState(false);
+
+const switchFeaturesVideo = (i: number) => {
+
+    if (i === featuresIdx) return;
+
+    setFade(true);
+
+    setTimeout(() => {
+        setFeaturesIdx(i);
+        featuresVideoRef.current?.load();
+    }, 200);
+
+    setTimeout(() => {
+        setFade(false);
+    }, 400);
+};
+
+
 
     // --- Section Renderers ---
     if (section === 'home') {
@@ -335,14 +377,17 @@ if (section === 'features') {
             <div className={styles.featuresTop}>
               {/* Video Section */}
               <div className={styles.videoBoxFeatures}>
-                <video controls
-                  ref={featuresVideoRef}
-                  src={current.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
+              
+                 <video
+                        controls
+                        className={`videoPlayernww ${fade ? "fade" : ""}`}
+                        ref={featuresVideoRef}
+                        src={current.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
               </div>
 
               {/* Buttons Section */}
@@ -357,7 +402,7 @@ if (section === 'features') {
                       background: `url(${titleButton}) no-repeat center center`,
                       backgroundSize: '100% 100%',
                     }}
-                    onClick={() => setFeaturesIdx(i)}
+                    onClick={() => switchFeaturesVideo(i)}
                   >
                     {item.button}
                   </button>
@@ -395,16 +440,17 @@ if (section === 'understanding') {
                  
                 <div className="understanding-top">
                     <div className="video-box">
-                        <video controls
-                             className="videoPlayer"
-                            ref={understandingVideoRef}
-                            src={current.video}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            preload="auto"
-                        />
+                      <video
+                        controls
+                        className={`videoPlayer ${fade ? "fade" : ""}`}
+                        ref={understandingVideoRef}
+                        src={current.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+
                   
 
                     </div>
@@ -414,7 +460,8 @@ if (section === 'understanding') {
                                 key={item.button}
                                 className={`title-button ${i === understandingIdx ? 'active' : ''}`}
                                 style={{ backgroundImage: `url(${titleButton})` }}
-                                onClick={() => understandingIdx !== i && setUnderstandingIdx(i)}
+                               onClick={() => switchUnderstandingVideo(i)}
+
                             >
                                 {item.button}
                             </button>
