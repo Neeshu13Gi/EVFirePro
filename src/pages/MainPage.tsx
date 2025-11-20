@@ -11,23 +11,24 @@ import backIcon from '../assets/images/back.png';
 import titleButton from '../assets/images/title_Button.png';
 
 //Low Render Videos
-import thermalVideo from '../assets/LowRender/F1_ThermalRunaway.mp4';
-import ToxicGases from '../assets/LowRender/F2_ToxicGases.mp4';
-import Deflagration from '../assets/LowRender/F5_Deflagration.mp4';
-import JetFlames from '../assets/LowRender/F3_JetFlames.mp4';
-import Consequences from '../assets/LowRender/F4_Consequences.mp4';
-import about_EV from '../assets/LowRender/about_EV_v2.mp4';
-import FireSuppressed from '../assets/LowRender/FireEVPro_FireSuppressed_V1.mp4';
-import FireUnSuppressed from '../assets/LowRender/FireEVPro_UnSuppressed_V1.mp4';
-import StailnlessSteel from '../assets/LowRender/F1_StailnlessSteel.mp4';
-import LowProfile from '../assets/LowRender/F2_LowProfile.mp4';
-import RetroFit from '../assets/LowRender/F3_RetroFit.mp4';
-import AutomaticActivation from '../assets/LowRender/F4_AutomaticActivation.mp4';
-import VerticleSpray from '../assets/LowRender/F5_VerticleSpray.mp4';
-import LateralWaterSpray from '../assets/LowRender/F6_LateralWaterSpray.mp4';
-import DryPipe from '../assets/LowRender/F9_DryPipe.mp4';
-import OccupantWarning from '../assets/LowRender/Occupant warning system.mp4';
-import connectwithbulding from '../assets/LowRender/connect with bulding fire-2.mp4';
+import thermalVideo from '../assets/videos/F1_ThermalRunaway.mp4';
+import ToxicGases from '../assets/videos/F2_ToxicGases.mp4';
+import Deflagration from '../assets/videos/F5_Deflagration.mp4';
+import JetFlames from '../assets/videos/F3_JetFlames.mp4';
+import Consequences from '../assets/videos/F4_Consequences.mp4';
+import about_EV from '../assets/videos/about_EV_v2.mp4';
+import FireSuppressed from '../assets/videos/FireEVPro_FireSuppressed_V1.mp4';
+import FireUnSuppressed from '../assets/videos/FireEVPro_UnSuppressed_V1.mp4';
+import StailnlessSteel from '../assets/videos/F1_StailnlessSteel.mp4';
+import LowProfile from '../assets/videos/F2_LowProfile.mp4';
+import RetroFit from '../assets/videos/F3_RetroFit.mp4';
+import AutomaticActivation from '../assets/videos/F4_AutomaticActivation.mp4';
+import VerticleSpray from '../assets/videos/F5_VerticleSpray.mp4';
+import LateralWaterSpray from '../assets/videos/F6_LateralWaterSpray.mp4';
+import DryPipe from '../assets/videos/F9_DryPipe.mp4';
+import OccupantWarning from '../assets/videos/Occupant warning system.mp4';
+import connectwithbulding from '../assets/videos/connect with bulding fire-2.mp4';
+
 
 
 //High Render Videos
