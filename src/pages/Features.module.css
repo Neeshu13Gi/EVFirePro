@@ -166,3 +166,55 @@
     line-height: 1.05;
   }
 }
+/* --- VIDEO BOX (Updated with smooth fade & desktop scaling) --- */
+.videoBoxFeatures {
+  width: 100%;
+  max-width: 725px;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  outline: 1px solid #ffffff;
+  outline-offset: 0cap;
+
+  background: #000;
+  overflow: hidden;
+  margin-top: 25px;
+  position: relative; /* REQUIRED for fade animation */
+}
+
+/* smooth fade video inside feature section */
+.videoBoxFeatures video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 1;
+  transition: opacity 0.35s ease-in-out !important;
+}
+
+/* fade class for switching video */
+.videoBoxFeatures video.fade {
+  opacity: 0;
+}
+
+
+/* === DESKTOP LARGE SIZING (Matches Understanding Section) === */
+@media (min-width: 900px) {
+  .videoBoxFeatures {
+    max-width: 900px !important;
+    width: 55vw !important;
+    aspect-ratio: 16/9 !important;
+    height: auto !important;
+  }
+}
+
+/* === 1440p / 4K Ultra Desktop === */
+@media (min-width: 1400px) {
+  .videoBoxFeatures {
+    max-width: 1100px !important;
+    width: 43vw !important;
+  }
+}

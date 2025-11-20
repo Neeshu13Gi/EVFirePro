@@ -380,3 +380,46 @@
 
 }
 /* === FINAL SCROLL FIX === */
+/* === FINAL SCROLL FIX === */
+.video-box {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* VIDEO STYLE */
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.35s ease-in-out;
+  position: absolute;
+  inset: 0;
+}
+
+/* FADE OUT */
+.videoPlayer.fade {
+  opacity: 0;
+}
+/* === DESKTOP FIX: MAKE VIDEO LARGE ON BIG SCREENS === */
+@media (min-width: 900px) {
+  .video-box {
+    max-width: 900px !important;
+    width: 55vw !important;
+    aspect-ratio: 16/9 !important;
+    height: auto !important;
+  }
+}
+
+/* === LARGE DESKTOP / 1440p / 4K === */
+@media (min-width: 1400px) {
+  .video-box {
+    max-width: 1100px !important;
+    width: 43vw !important;
+  }
+}
