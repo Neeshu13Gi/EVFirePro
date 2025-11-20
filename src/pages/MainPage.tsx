@@ -11,7 +11,7 @@ import backIcon from '../assets/images/back.png';
 import titleButton from '../assets/images/title_Button.png';
 
 //Low Render Videos
-import thermalVideo from '../assets/videos/F1_ThermalRunaway.mp4';
+import ThermalVideo from '../assets/videos/F1_ThermalRunaway.mp4';
 import ToxicGases from '../assets/videos/F2_ToxicGases.mp4';
 import Deflagration from '../assets/videos/F5_Deflagration.mp4';
 import JetFlames from '../assets/videos/F3_JetFlames.mp4';
@@ -147,7 +147,7 @@ const understandingContent = [
         title: 'What is thermal runaway?',
         text: 'A self-sustaining chemical reaction in a lithium-ion cell — often triggered by battery damage, overcharging, or a fault — that overheats and ignites surrounding cells.',
         button: 'Thermal Runaway',
-        video: thermalVideo,
+        video: ThermalVideo,
     },
     {
         title: 'What are toxic gases in EV fires?',
