@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "./static/css/main.56ee0673.css",
-    "main.js": "./static/js/main.68afe6cb.js",
+    "main.css": "./static/css/main.90a532cf.css",
+    "main.js": "./static/js/main.3a80f3b5.js",
     "static/js/453.17fce888.chunk.js": "./static/js/453.17fce888.chunk.js",
+    "static/media/F6_LateralWaterSpray.mp4": "./static/media/F6_LateralWaterSpray.5a9a5891b925bed71613.mp4",
+    "static/media/F4_AutomaticActivation.mp4": "./static/media/F4_AutomaticActivation.764491652d366553d3ab.mp4",
+    "static/media/F5_VerticleSpray.mp4": "./static/media/F5_VerticleSpray.42a49a67c9966a1f1feb.mp4",
     "static/media/FireEVPro_FireSuppressed_V1.mp4": "./static/media/FireEVPro_FireSuppressed_V1.dfc0480d7d6b32a8cb49.mp4",
     "static/media/F3_JetFlames.mp4": "./static/media/F3_JetFlames.b5a86e6f3e83c82d1a30.mp4",
     "static/media/F2_ToxicGases.mp4": "./static/media/F2_ToxicGases.49ab4059418e110b8b5d.mp4",
@@ -10,25 +13,22 @@
     "static/media/F1_ThermalRunaway.mp4": "./static/media/F1_ThermalRunaway.0b4c8a5a17ba7a613732.mp4",
     "static/media/F4_Consequences.mp4": "./static/media/F4_Consequences.1fb14df55cca65922a92.mp4",
     "static/media/F5_Deflagration.mp4": "./static/media/F5_Deflagration.07eb26a74be44ab7ae15.mp4",
-    "static/media/F4_AutomaticActivation.mp4": "./static/media/F4_AutomaticActivation.bc41e51b50889571476b.mp4",
     "static/media/F1_StailnlessSteel.mp4": "./static/media/F1_StailnlessSteel.d01c2b34b8d8ffa277a9.mp4",
     "static/media/about_EV_v2.mp4": "./static/media/about_EV_v2.28c077b9b196c05d40ab.mp4",
     "static/media/F2_LowProfile.mp4": "./static/media/F2_LowProfile.e33195c4abe01cfbfa71.mp4",
     "static/media/Occupant warning system.mp4": "./static/media/Occupant warning system.d39359bc3180dff16989.mp4",
     "static/media/F3_RetroFit.mp4": "./static/media/F3_RetroFit.9a070fafb61787b6d2db.mp4",
     "static/media/connect with bulding fire-2.mp4": "./static/media/connect with bulding fire-2.5b2fb353f8ef3fd26d37.mp4",
-    "static/media/F6_LateralWaterSpray.mp4": "./static/media/F6_LateralWaterSpray.79081449415e5cd2fb33.mp4",
-    "static/media/F5_VerticleSpray.mp4": "./static/media/F5_VerticleSpray.dc6af79076ab28fdd7ac.mp4",
     "static/media/F9_DryPipe.mp4": "./static/media/F9_DryPipe.9d95011f93016a3219ed.mp4",
     "static/media/EVlogo.png": "./static/media/EVlogo.ff31dbb20b74d659a766.png",
     "static/media/understanding.png": "./static/media/understanding.437828d932f7d07c49ce.png",
     "index.html": "./index.html",
-    "main.56ee0673.css.map": "./static/css/main.56ee0673.css.map",
-    "main.68afe6cb.js.map": "./static/js/main.68afe6cb.js.map",
+    "main.90a532cf.css.map": "./static/css/main.90a532cf.css.map",
+    "main.3a80f3b5.js.map": "./static/js/main.3a80f3b5.js.map",
     "453.17fce888.chunk.js.map": "./static/js/453.17fce888.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.56ee0673.css",
-    "static/js/main.68afe6cb.js"
+    "static/css/main.90a532cf.css",
+    "static/js/main.3a80f3b5.js"
   ]
 }
