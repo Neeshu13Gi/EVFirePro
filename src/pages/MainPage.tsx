@@ -9,12 +9,45 @@ import featuresImg from '../assets/images/EV Features.png';
 import understandingImg from '../assets/images/understanding.png';
 import backIcon from '../assets/images/back.png';
 import titleButton from '../assets/images/title_Button.png';
-import thermalVideo from '../assets/videos/thermalRunaway.mp4';
-import about_EV from '../assets/videos/about_EV_v2.mp4';
-import FireSuppressed from '../assets/videos/FireEVPro_FireSuppressed_V1.mp4';
-import FireUnSuppressed from '../assets/videos/FireEVPro_UnSuppressed_V1.mp4';
-import OccupantWarning from '../assets/videos/Occupant warning system.mp4';
-import connectwithbulding from '../assets/videos/connect with bulding fire-2.mp4';
+
+//Low Render Videos
+import thermalVideo from '../assets/LowRender/F1_ThermalRunaway.mp4';
+import ToxicGases from '../assets/LowRender/F2_ToxicGases.mp4';
+import Deflagration from '../assets/LowRender/F5_Deflagration.mp4';
+import JetFlames from '../assets/LowRender/F3_JetFlames.mp4';
+import Consequences from '../assets/LowRender/F4_Consequences.mp4';
+import about_EV from '../assets/LowRender/about_EV_v2.mp4';
+import FireSuppressed from '../assets/LowRender/FireEVPro_FireSuppressed_V1.mp4';
+import FireUnSuppressed from '../assets/LowRender/FireEVPro_UnSuppressed_V1.mp4';
+import StailnlessSteel from '../assets/LowRender/F1_StailnlessSteel.mp4';
+import LowProfile from '../assets/LowRender/F2_LowProfile.mp4';
+import RetroFit from '../assets/LowRender/F3_RetroFit.mp4';
+import AutomaticActivation from '../assets/LowRender/F4_AutomaticActivation.mp4';
+import VerticleSpray from '../assets/LowRender/F5_VerticleSpray.mp4';
+import LateralWaterSpray from '../assets/LowRender/F6_LateralWaterSpray.mp4';
+import DryPipe from '../assets/LowRender/F9_DryPipe.mp4';
+import OccupantWarning from '../assets/LowRender/Occupant warning system.mp4';
+import connectwithbulding from '../assets/LowRender/connect with bulding fire-2.mp4';
+
+
+
+// import thermalVideo from '../assets/videos/F1_ThermalRunaway.mp4';
+// import ToxicGases from '../assets/videos/F2_ToxicGases.mp4';
+// import Deflagration from '../assets/videos/F5_Deflagration.mp4';
+// import JetFlames from '../assets/videos/F3_JetFlames.mp4';
+// import Consequences from '../assets/videos/F4_Consequences.mp4';
+// import about_EV from '../assets/videos/about_EV_v2.mp4';
+// import FireSuppressed from '../assets/videos/FireEVPro_FireSuppressed_V1.mp4';
+// import FireUnSuppressed from '../assets/videos/FireEVPro_UnSuppressed_V1.mp4';
+// import StailnlessSteel from '../assets/videos/F1_StailnlessSteel.mp4';
+// import LowProfile from '../assets/videos/F2_LowProfile.mp4';
+// import RetroFit from '../assets/videos/F3_RetroFit.mp4';
+// import AutomaticActivation from '../assets/videos/F4_AutomaticActivation.mp4';
+// import VerticleSpray from '../assets/videos/F5_VerticleSpray.mp4';
+// import LateralWaterSpray from '../assets/videos/F6_LateralWaterSpray.mp4';
+// import DryPipe from '../assets/videos/F9_DryPipe.mp4';
+// import OccupantWarning from '../assets/videos/Occupant warning system.mp4';
+// import connectwithbulding from '../assets/videos/connect with bulding fire-2.mp4';
 import './UnderstandingSection.css';
 import styles from './Features.module.css';
 
@@ -118,25 +151,25 @@ const understandingContent = [
         title: 'What are toxic gases in EV fires?',
         text: 'Burning batteries release:• Hydrogen fluoride (HF)  • Carbon monoxide (CO)  • Carbon dioxide (CO2)  • Methane (CH4)  • Hydrogen (H2) and other toxic vapours creating life-threatening risks for people and responders',
         button: 'Toxic Gases',
-        video: thermalVideo,
+        video: ToxicGases,
     },
     {
         title: 'Deflagration',
         text: 'A sudden explosive flash fire caused when flammable battery gases like hydrogen (H2), methane (CH4), and carbon monoxide  (CO) mix with air and ignite ',
         button: 'Deflagration',
-        video: thermalVideo,
+        video: Deflagration,
     },
     {
         title: 'Intense Jet-like Flames',
         text: 'Fires can eject jet flames over 1,000°C (1,832°F) sideways – igniting vehicles and damaging structures.',
         button: 'Jet-like Flames',
-        video: thermalVideo,
+        video: JetFlames,
     },
     {
         title: 'Consequences of EV Fires in Enclosed Car Parks',
         text: 'Fires release heat and toxic smoke that can weaken structures and force mass evacuation.',
         button: 'Consequences of EV Fires in Enclosed Car Parks',
-        video: thermalVideo,
+        video: Consequences,
     },
     {
         title: 'About Electric Vehicles',
@@ -148,15 +181,15 @@ const understandingContent = [
 
 // --- Features Section Logic ---
 const featuresContent = [
-    { title: 'Stainless Steel Construction', text: 'Specifications: • 3mm (0.12 in.) 304 stainless steel • 316 marine grade stainless steel available for harsher environments ', button: 'Stainless Steel Construction', video: thermalVideo },
-    { title: 'Low Profile Design', text: 'EV FirePro is low profile: • Sits just 30mm (1.2 in.) above the car park floor Benefit: • Minimises trip hazards', button: 'Low-profile Design', video: thermalVideo },
-    { title: 'Retrofit or New Build', text: 'EV FirePro can: • Be installed into existing bays without cutting concrete; or • Be rebated into new builds for a seamless finish ', button: 'Retrofit or New Build', video: thermalVideo },
-    { title: 'Automatic Activation', text: 'Activates instantly at 68°C (154°F) when heat is detected Benefits: • No manual intervention required.', button: 'Automatic Activation', video: thermalVideo },
-    { title: 'Vertical spray directly beneath the vehicle cooling the battery pack ', text: 'Benefits: • Reduces heat at its source • Limits fire spread • Increases time for evacuations if required ', button: 'Vertical Spray Cooling', video: thermalVideo },
-    { title: 'Sprays water laterally outward from under the vehicle', text: 'Benefits: • Protects adjacent vehicles from fire spread • Prevents structural damage', button: 'Lateral Water Spray', video: thermalVideo },
+    { title: 'Stainless Steel Construction', text: 'Specifications: • 3mm (0.12 in.) 304 stainless steel • 316 marine grade stainless steel available for harsher environments ', button: 'Stainless Steel Construction', video: StailnlessSteel },
+    { title: 'Low Profile Design', text: 'EV FirePro is low profile: • Sits just 30mm (1.2 in.) above the car park floor Benefit: • Minimises trip hazards', button: 'Low-profile Design', video: LowProfile },
+    { title: 'Retrofit or New Build', text: 'EV FirePro can: • Be installed into existing bays without cutting concrete; or • Be rebated into new builds for a seamless finish ', button: 'Retrofit or New Build', video: RetroFit },
+    { title: 'Automatic Activation', text: 'Activates instantly at 68°C (154°F) when heat is detected Benefits: • No manual intervention required.', button: 'Automatic Activation', video: AutomaticActivation },
+    { title: 'Vertical spray directly beneath the vehicle cooling the battery pack ', text: 'Benefits: • Reduces heat at its source • Limits fire spread • Increases time for evacuations if required ', button: 'Vertical Spray Cooling', video: VerticleSpray },
+    { title: 'Sprays water laterally outward from under the vehicle', text: 'Benefits: • Protects adjacent vehicles from fire spread • Prevents structural damage', button: 'Lateral Water Spray', video: LateralWaterSpray },
     { title: 'Connects directly to the building’s fire detection and alarms', text: 'Benefits: • Ensures emergency services are alerted immediately• Addressable system- pinpointing location for emergency services ', button: 'Building System Integration', video: connectwithbulding },
     { title: 'Integrates with the building’s occupant alert system  ', text: 'Benefits: • Esures a fast and safe evacuation of building occupants. ', button: 'Occupant Warning', video: OccupantWarning },
-    { title: 'Remains dry and unpressurised until activation ', text: 'Benefits: • Prevents leaks and reduces corrosion.', button: 'Dry Pipework', video: thermalVideo },
+    { title: 'Remains dry and unpressurised until activation ', text: 'Benefits: • Prevents leaks and reduces corrosion.', button: 'Dry Pipework', video: DryPipe },
 ];
 
 const MainPage = () => {
