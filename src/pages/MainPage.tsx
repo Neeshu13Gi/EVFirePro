@@ -30,6 +30,7 @@ import OccupantWarning from '../assets/LowRender/Occupant warning system.mp4';
 import connectwithbulding from '../assets/LowRender/connect with bulding fire-2.mp4';
 
 
+//High Render Videos
 
 // import thermalVideo from '../assets/videos/F1_ThermalRunaway.mp4';
 // import ToxicGases from '../assets/videos/F2_ToxicGases.mp4';
